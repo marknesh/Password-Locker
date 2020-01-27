@@ -13,6 +13,7 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_username.username, "mark")
         self.assertEqual(self.new_password.password, "99990")
 
+
     def test_save_username(self):
         self.new_username.save_username()
         self.assertEqual(len(User.username_list), 1)
@@ -29,7 +30,6 @@ class TestPassword(unittest.TestCase):
         self.new_password.save_password()
         test_password = Password("44444")
         test_password.save_password()
-
         self.assertEqual(Password.display_password(), Password.password_list)
 
     def test_display_username(self):
