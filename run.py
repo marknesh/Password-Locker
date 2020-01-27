@@ -64,10 +64,12 @@ def main():
         for user in display_username():
             print(user.username)
 
-        if password == "ge":
+        if password == "generate":
             for password in display_password():
                 print(getpass(12))
                 return
+
+
 
 
 
