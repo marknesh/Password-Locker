@@ -113,7 +113,7 @@ def main():
         elif form == "r":
 
             if display_username():
-                for user in display_username():
+
                     if dataInput == "show":
                         for user in display_username():
                             print(f"username: ", {user.username})
@@ -121,15 +121,19 @@ def main():
                                 print(f"password: ", {password.password})
                                 print("your password length is " + str(len(password.password)))
 
+
             else:
                 print("SORRY YOU HAVE NO CREDENTIALS")
 
         elif form == "d":
-            for password in display_password():
-                if delete_password(password):
-                        print("all passwords deleted successfully")
-                else:
-                     print("you have no  saved passwords")
+            if delete_password(password):
+                print("deleted all passwords")
+            else:
+                print("deleted all passwords")
+
+
+
+
 
 
 
