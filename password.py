@@ -1,5 +1,5 @@
 import string
-
+import pyperclip
 import random
 
 
@@ -28,6 +28,11 @@ class Password:
         for password in cls.password_list:
             if password.password == number:
                 return password
+    @classmethod
+
+    def copy_password(cls,number):
+        found_password = Password.find_password(number)
+        pyperclip.copy(found_password.password)
 
 
 

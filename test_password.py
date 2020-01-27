@@ -41,8 +41,8 @@ class TestPassword(unittest.TestCase):
 
     def test_copy_password(self):
         self.new_password.save_password()
-        test_password = Password("9999")
-        test_password.save_password()
+        Password.copy_password("99990")
+        self.assertEqual(self.new_password.password, pyperclip.paste())
     def test_delete_password(self):
         self.new_password.save_password()
         test_password = Password("dwdw")
@@ -56,7 +56,7 @@ class TestPassword(unittest.TestCase):
         test_password.save_password()
         found_password = Password.find_password("090909")
         self.assertEqual(found_password.password, test_password.password)
-        # self.assertEqual(self.new_password.password, pyperclip.paste())
+
 
     # @classmethod
     # def find_by_number(cls, number):
