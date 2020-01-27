@@ -15,9 +15,17 @@ class Password:
 
 
 
+
     @classmethod
     def display_password(cls):
         return cls.password_list
+
+    @classmethod
+    def find_password(cls,number):
+        for password in cls.password_list:
+            if password.password == number:
+                return password
+
 
 
 

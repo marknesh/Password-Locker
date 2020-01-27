@@ -41,53 +41,53 @@ def getpass(num):
 
 
 def main():
-    print("enter username")
-
-    username = input()
-
-
-    with open("username.txt",  "w") as userData:
-        data = userData.write(username)
-    save_username(create_username(username))
-
-    print("enter password or type generate to generate a new password")
-
-
-    password = input()
-    save_password(create_password(password))
-    with open("password.text", "w") as passwordData:
-        datapassword = passwordData.write(password)
 
 
 
-    print("type show to  display your credentials")
-    dataInput = input()
+    while True:
+        print("type s to signup t to login")
 
-    if dataInput == "show":
-        for user in display_username():
-            print(f"username: ", {user.username})
-
-        if password == "generate":
-            save_password(create_password(getpass(12)))
-            with open("password.text", "w") as passwordData:
-                datapassword = passwordData.write(getpass(12))
-
-
-            for password in display_password():
-                print(f"password: ", {getpass(12)})
-                print("your password length is " + str(len(getpass(12))))
-                return
+        form = input()
+        if form == "s":
+            print("enter username")
+            username = input()
+            with open("username.txt",  "w") as userData:
+                data = userData.write(username)
+                save_username(create_username(username))
+                print("enter password or type generate to generate a new password")
+                password = input()
+                save_password(create_password(password))
+                with open("password.text", "w") as passwordData:
+                    datapassword = passwordData.write(password)
+                    print("type show to  display your credentials")
+                    dataInput = input()
+                    if dataInput == "show":
+                        for user in display_username():
+                            print(f"username: ", {user.username})
+                            if password == "generate":
+                                save_password(create_password(getpass(12)))
+                                with open("password.text", "w") as passwordData:
+                                    datapassword = passwordData.write(getpass(12))
+                                    for password in display_password():
+                                        print(f"password: ", {getpass(12)})
+                                        print("your password length is " + str(len(getpass(12))))
+                                        return
 
 
 
 
+                        for password in display_password():
+                            print(f"password: ", {password.password})
+                            print("your password length is " + str(len(password.password)))
 
-        for password in display_password():
-            print(f"password: ", {password.password})
-            print("your password length is " + str(len(password.password)))
+        elif form =="t":
+            print("enter username")
 
-            print("to delete contact type delete")
-        pp = input()
+
+
+
+
+
 
 
 
