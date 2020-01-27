@@ -86,11 +86,22 @@ def main():
         elif form =="t":
             print("enter username")
             username = input()
+            with open("username.txt", "r") as raa:
+                dff = raa.read()
+            if username == dff:
+                print("enter password")
+            else:
+                print("please signup")
 
-            print("enter password")
             password = input()
-            print("logged in successfully")
-            break
+            with open("password.text","r") as han:
+                fr = han.read()
+            if password == fr:
+                print("logged in successfully")
+                break
+            else:
+                print("wrong password")
+
 
         elif form == "r":
             for user in display_username():
@@ -109,12 +120,6 @@ def main():
 
         else:
             print("PLEASE TYPE S OR T")
-
-
-
-
-
-
 
 
 if __name__ == '__main__':
