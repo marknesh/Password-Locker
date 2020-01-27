@@ -50,16 +50,12 @@ def main():
 
     print("enter password or type generate to generate a new password")
 
-
     password = input()
-    if password == "generate":
-        print(getpass(14))
-
-
     save_password(create_password(password))
     with open("password.text", "w") as passwordData:
         datapassword = passwordData.write(password)
         print("your password length is " + str(len(password)))
+
 
 
 
@@ -74,16 +70,7 @@ def main():
             print(user.username)
 
         for password in display_password():
-            print(password.password)
-
-
-
-
-
-
-
-
-
+            print(getpass(14))
 
 
 
