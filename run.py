@@ -82,7 +82,15 @@ def main():
 
         elif form =="t":
             print("enter username")
+            username = input()
 
+            print("enter password")
+            password = input()
+            print("logged in successfully")
+            break
+
+        else:
+            print("PLEASE TYPE S OR T")
 
 
 
