@@ -48,7 +48,7 @@ def main():
 
 
     while True:
-        print("type s to signup t to login")
+        print("type s to signup, t to login ,r to show credentials")
 
         form = input()
         if form == "s":
@@ -93,7 +93,19 @@ def main():
             break
 
         elif form == "r":
-            password.de
+            for user in display_username():
+                if dataInput == "show":
+                    for user in display_username():
+                        print(f"username: ", {user.username})
+
+
+            for password in display_password():
+                print(f"password: ", {password.password})
+                print("your password length is " + str(len(password.password)))
+
+            else:
+                print("no credentials found please create username and password")
+
 
         else:
             print("PLEASE TYPE S OR T")
