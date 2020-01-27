@@ -6,14 +6,25 @@ import pyperclip
 
 class TestPassword(unittest.TestCase):
     def setUp(self):
+
+        """
+        function that dictate instructions to be done before each method
+        """
         self.new_username = User("mark")
         self.new_password = Password("99990")
 
     def test_init(self):
+
+        """
+        function that initializes the tests.
+        """
         self.assertEqual(self.new_username.username, "mark")
         self.assertEqual(self.new_password.password, "99990")
 
     def test_save_username(self):
+        """
+        function that saves the username by adding it in the username list
+        """
         self.new_username.save_username()
         self.assertEqual(len(User.username_list), 1)
 
