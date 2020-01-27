@@ -47,8 +47,9 @@ def main():
 
 
 
+    global password
     while True:
-        print("type s to signup, t to login ,r to show credentials")
+        print("type s to signup, t to login ,r to show credentials , d to delete all passwords")
 
         form = input()
         if form == "s":
@@ -122,6 +123,13 @@ def main():
 
             else:
                 print("SORRY YOU HAVE NO CREDENTIALS")
+
+        elif form == "d":
+            for password in display_password():
+                if delete_password(password):
+                        print("all passwords deleted successfully")
+                else:
+                     print("you have no  saved passwords")
 
 
 
