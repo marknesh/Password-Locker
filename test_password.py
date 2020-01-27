@@ -29,10 +29,17 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(len(User.username_list), 1)
 
     def test_save_password(self):
+        """
+              function that saves password by adding it in the password list
+              """
         self.new_password.save_password()
         self.assertEqual(len(Password.password_list), 1)
 
     def tearDown(self):
+        """
+                      function to avoid addition of another password in password_list
+                      """
+
         Password.password_list = []
         User.username_list = []
 
