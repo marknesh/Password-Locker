@@ -23,19 +23,19 @@ class Password:
 
 
 
-def getpass(num):
-    password = ''
-
-    for n in range(num):
-        x = random.randint(0,  50)
-        password += string.printable[x]
-    return password
-
-
-print(len(getpass(12)))
-
-
-print(getpass(12))
+# def getpass(num):
+#     password = ''
+#
+#     for n in range(num):
+#         x = random.randint(0,  50)
+#         password += string.printable[x]
+#     return password
+#
+#
+# print(len(getpass(12)))
+#
+#
+# print(getpass(12))
 
 
 

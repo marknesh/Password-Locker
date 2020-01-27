@@ -23,7 +23,7 @@ def save_password(password):
 
 
 def display_username():
-    return  User.display_username()
+    return User.display_username()
 
 def display_password():
     return Password.display_password()
@@ -57,7 +57,7 @@ def main():
         print("your password length is " + str(len(password)))
 
 
-
+    print("type show to  display your credentials")
     dataInput = input()
 
     if dataInput == "show":
