@@ -46,7 +46,6 @@ def main():
     username = input()
 
 
-
     with open("username.txt",  "w") as userData:
         data = userData.write(username)
     save_username(create_username(username))
@@ -87,6 +86,8 @@ def main():
             print(f"password: ", {password.password})
             print("your password length is " + str(len(password.password)))
 
+            print("to delete contact type delete")
+        pp = input()
 
 
 
