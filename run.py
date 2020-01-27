@@ -56,19 +56,25 @@ def main():
         datapassword = passwordData.write(password)
         print("your password length is " + str(len(password)))
 
+
+
     dataInput = input()
 
     if dataInput == "show":
         for user in display_username():
             print(user.username)
 
+        if password == "ge":
+            for password in display_password():
+                print(getpass(12))
+                return
+
+
 
         for password in display_password():
             print(password.password)
 
-    if password == "ge":
-        for password in display_password():
-            print(getpass(12))
+
 
 
 if __name__ == '__main__':
