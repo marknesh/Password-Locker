@@ -69,10 +69,24 @@ def main():
         for user in display_username():
             print(user.username)
 
+
         for password in display_password():
-            print(getpass(14))
+            print(password.password)
 
+    if password == "generate":
+        save_password(create_password(password))
+        with open("password.text", "w") as passwordData:
+            datapassword = passwordData.write(password)
+            print("your password length is " + str(len(password)))
 
+        dataInput = input()
+
+        if dataInput == "show":
+            for user in display_username():
+                print(user.username)
+
+            for password in display_password():
+                print(getpass(14))
 
 if __name__ == '__main__':
     main()
