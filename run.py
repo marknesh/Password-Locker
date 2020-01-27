@@ -62,11 +62,16 @@ def main():
 
     if dataInput == "show":
         for user in display_username():
-            print(user.username)
+            print(f"username: ", {user.username})
 
         if password == "generate":
+            save_password(create_password(getpass(12)))
+            with open("password.text", "w") as passwordData:
+                datapassword = passwordData.write(getpass(12))
+
+
             for password in display_password():
-                print(getpass(12))
+                print(f"password: ", {getpass(12)})
                 return
 
 
@@ -74,7 +79,7 @@ def main():
 
 
         for password in display_password():
-            print(password.password)
+            print(f"password: ", {password.password})
 
 
 
