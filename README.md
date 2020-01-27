@@ -7,7 +7,9 @@ It also generates user passwords.
 The user must however sign up to all accounts with passwords.
 
 ## Operating
-First the user must first sign into all their accounts using their passwords inorder to store and manage their password.
+The pc must first have python installed.
+Then run (python3.6 run.py) in the terminal.
+The user must first sign into all their accounts using their passwords inorder to store and manage their password.
 Afterwards, the user only logs into the system.
 Also the user can also see all the signed in accounts.
 
