@@ -1,6 +1,8 @@
 ## Application name
 Password Locker
 
+![](images/images.png)
+
 ## Description
 This application is used to manage password for users.
 It also generates user passwords.

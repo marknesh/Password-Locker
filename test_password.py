@@ -44,12 +44,18 @@ class TestPassword(unittest.TestCase):
         User.username_list = []
 
     def test_display_password(self):
+        """
+                          function to display password that has already being saved
+                          """
         self.new_password.save_password()
         test_password = Password("44444")
         test_password.save_password()
         self.assertEqual(Password.display_password(), Password.password_list)
 
     def test_display_username(self):
+        """
+                                function to display  username that has already being saved
+                                """
         self.new_username.save_username()
         test_username = User("mark")
         test_username.save_username()
@@ -57,6 +63,9 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(User.display_username(), User.username_list)
 
     def test_copy_password(self):
+        """
+                                function to copy the password to the clipboard
+                                """
         self.new_password.save_password()
         Password.copy_password("99990")
         self.assertEqual(self.new_password.password, pyperclip.paste())
