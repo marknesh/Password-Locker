@@ -29,7 +29,6 @@ class Password:
             if password.password == number:
                 return password
     @classmethod
-
     def copy_password(cls,number):
         found_password = Password.find_password(number)
         pyperclip.copy(found_password.password)
@@ -41,19 +40,7 @@ class Password:
 
 
 
-# def getpass(num):
-#     password = ''
-#
-#     for n in range(num):
-#         x = random.randint(0,  50)
-#         password += string.printable[x]
-#     return password
-#
-#
-# print(len(getpass(12)))
-#
-#
-# print(getpass(12))
+
 
 
 

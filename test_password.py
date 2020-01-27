@@ -13,7 +13,6 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_username.username, "mark")
         self.assertEqual(self.new_password.password, "99990")
 
-
     def test_save_username(self):
         self.new_username.save_username()
         self.assertEqual(len(User.username_list), 1)
@@ -43,9 +42,10 @@ class TestPassword(unittest.TestCase):
         self.new_password.save_password()
         Password.copy_password("99990")
         self.assertEqual(self.new_password.password, pyperclip.paste())
+
     def test_delete_password(self):
         self.new_password.save_password()
-        test_password = Password("dwdw")
+        test_password = Password("d555")
         test_password.save_password()
         self.new_password.delete_password()
         self.assertEqual(len(Password.password_list), 1)
@@ -56,30 +56,6 @@ class TestPassword(unittest.TestCase):
         test_password.save_password()
         found_password = Password.find_password("090909")
         self.assertEqual(found_password.password, test_password.password)
-
-
-    # @classmethod
-    # def find_by_number(cls, number):
-    #     for password in cls.password_list:
-    #         if .phone_number == number:
-    #             return contact
-
-
-
-
-
-
-
-             
-
-
-
-
-
-
-
-
-
 
 
 if __name__ == '__main__':

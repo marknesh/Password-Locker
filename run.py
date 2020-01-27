@@ -110,12 +110,15 @@ def main():
                         print(f"username: ", {user.username})
 
 
-            for password in display_password():
-                print(f"password: ", {password.password})
-                print("your password length is " + str(len(password.password)))
+                    for password in display_password():
+                        print(f"password: ", {password.password})
+                        print("your password length is " + str(len(password.password)))
 
-            else:
-                print("no credentials found please create username and password")
+
+        # elif:
+        #     print("sd")
+
+
 
 
         else:
