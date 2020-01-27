@@ -3,11 +3,13 @@ Password Locker
 
 ## Description
 This application is used to manage password for users.
-It also generates user passwords
+It also generates user passwords.
+The user must however sign up to all accounts with passwords.
 
 ## Operating
 First the user must first sign into all their accounts using their passwords inorder to store and manage their password.
 Afterwards, the user only logs into the system.
+Also the user can also see all the signed in accounts.
 
 ##  Technology used
 I used python to create the application.
