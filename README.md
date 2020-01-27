@@ -16,6 +16,8 @@ Also the user can also see all the signed in accounts.
 ##  Technology used
 I used python to create the application.
 
+## Troubleshooting
+If you encounter any problems please feel free to contact me on the contacts provided in the web application and also below.
 
 ## Support and contact details
 Contact us on : 074658743
