@@ -54,23 +54,28 @@ def main():
         if form == "s":
             print("enter username")
             username = input()
+
             with open("username.txt",  "w") as userData:
                 data = userData.write(username)
                 save_username(create_username(username))
-                print("enter password or type generate to generate a new password")
+                print("enter password or type generate to Generate a new password")
+
                 password = input()
                 save_password(create_password(password))
                 with open("password.text", "w") as passwordData:
                     datapassword = passwordData.write(password)
                     print("type show to  display your credentials")
+
                     dataInput = input()
                     if dataInput == "show":
                         for user in display_username():
                             print(f"username: ", {user.username})
+
                             if password == "generate":
                                 save_password(create_password(getpass(12)))
                                 with open("password.text", "w") as passwordData:
                                     datapassword = passwordData.write(getpass(12))
+
                                     for password in display_password():
                                         print(f"password: ", {getpass(12)})
                                         print("your password length is " + str(len(getpass(12))))
@@ -86,18 +91,18 @@ def main():
         elif form =="t":
             print("enter username")
             username = input()
-            with open("username.txt", "r") as raa:
-                dff = raa.read()
-            if username == dff:
+            with open("username.txt", "r") as handleUsername:
+                userTool = handleUsername.read()
+            if username == userTool:
                 print("enter password")
             else:
                 print("No such username exists please signup")
                 break
 
             password = input()
-            with open("password.text","r") as han:
-                fr = han.read()
-            if password == fr:
+            with open("password.text", "r") as handlePassword:
+                passwordtool = handlePassword.read()
+            if password == passwordtool:
                 print("logged in successfully")
                 break
             else:

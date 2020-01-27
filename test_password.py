@@ -71,6 +71,10 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(self.new_password.password, pyperclip.paste())
 
     def test_delete_password(self):
+
+        """
+                                function to delete the password  that is saved in the password_list
+                                """
         self.new_password.save_password()
         test_password = Password("d555")
         test_password.save_password()
@@ -78,6 +82,9 @@ class TestPassword(unittest.TestCase):
         self.assertEqual(len(Password.password_list), 1)
 
     def test_find_password(self):
+        """
+                                function to find if their is any such password that is listed
+                                """
         self.new_password.save_password()
         test_password = Password("090909")
         test_password.save_password()
