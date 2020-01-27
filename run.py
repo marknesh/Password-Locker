@@ -91,7 +91,8 @@ def main():
             if username == dff:
                 print("enter password")
             else:
-                print("please signup")
+                print("No such username exists please signup")
+                break
 
             password = input()
             with open("password.text","r") as han:
@@ -100,29 +101,27 @@ def main():
                 print("logged in successfully")
                 break
             else:
-                print("wrong password")
+                print("WRONG PASSWORD")
 
 
         elif form == "r":
-            for user in display_username():
-                if dataInput == "show":
-                    for user in display_username():
-                        print(f"username: ", {user.username})
 
+            if display_username():
+                for user in display_username():
+                    if dataInput == "show":
+                        for user in display_username():
+                            print(f"username: ", {user.username})
+                            for password in display_password():
+                                print(f"password: ", {password.password})
+                                print("your password length is " + str(len(password.password)))
 
-                    for password in display_password():
-                        print(f"password: ", {password.password})
-                        print("your password length is " + str(len(password.password)))
-
-
-        # elif:
-        #     print("sd")
-
+            else:
+                print("SORRY YOU HAVE NO CREDENTIALS")
 
 
 
         else:
-            print("PLEASE TYPE S OR T")
+            print("PLEASE TYPE s OR t")
 
 
 if __name__ == '__main__':
