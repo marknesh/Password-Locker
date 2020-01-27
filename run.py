@@ -21,6 +21,9 @@ def save_username(user):
 def save_password(password):
     password.save_password()
 
+def delete_password(password):
+    password.delete_password()
+
 
 def display_username():
     return User.display_username()
@@ -88,6 +91,9 @@ def main():
             password = input()
             print("logged in successfully")
             break
+
+        elif form == "r":
+            password.de
 
         else:
             print("PLEASE TYPE S OR T")

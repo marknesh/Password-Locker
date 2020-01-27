@@ -43,11 +43,12 @@ class TestPassword(unittest.TestCase):
         self.new_password.save_password()
         test_password = Password("9999")
         test_password.save_password()
-    # def test_delete_password(self):
-    #     self.new_password.save_password()
-    #     test_password = Password("dwdw")
-    #     test_password.delete_password()
-    #     self.assertEqual(len(Password.password_list),1)
+    def test_delete_password(self):
+        self.new_password.save_password()
+        test_password = Password("dwdw")
+        test_password.save_password()
+        self.new_password.delete_password()
+        self.assertEqual(len(Password.password_list), 1)
 
     def test_find_password(self):
         self.new_password.save_password()

@@ -13,6 +13,9 @@ class Password:
     def save_password(self):
         Password.password_list.append(self)
 
+    def delete_password(self):
+        Password.password_list.remove(self)
+
 
 
 
@@ -25,6 +28,8 @@ class Password:
         for password in cls.password_list:
             if password.password == number:
                 return password
+
+
 
 
 
