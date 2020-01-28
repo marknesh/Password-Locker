@@ -1,3 +1,6 @@
+
+[![codebeat badge](https://codebeat.co/badges/1cebd01a-8930-48d5-85cc-17f4d87f7ca4)](https://codebeat.co/projects/github-com-marknesh-password-locker-master)
+
 ## Application name
 Password Locker
 
